@@ -1,0 +1,24 @@
+﻿name: SoulPetsPlugin
+version: '${version}'
+main: com.pets.plugin.SoulPetsPlugin
+api-version: '1.21'
+author: Anonymous
+description: Capture, train and fight with your own mobs.
+commands:
+  pet:
+    description: Manage your pets
+    usage: /pet
+    permission: SoulPetsPlugin.use
+  petadmin:
+    description: Admin commands
+    usage: /petadmin reload
+    permission: SoulPetsPlugin.admin
+permissions:
+  SoulPetsPlugin.use:
+    default: true
+  SoulPetsPlugin.admin:
+    default: op
+  SoulPetsPlugin.capture.boss:
+    default: op
+
+

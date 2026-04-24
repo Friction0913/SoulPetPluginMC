@@ -1,0 +1,77 @@
+﻿# SoulPetsPlugin configuration
+
+# Maximum pets a player can store (captured but not active)
+max-stored-pets: 10
+
+# Maximum active pets at once
+max-active-pets: 2
+
+# Hunger decay per tick (0.5s)
+hunger-decay: 0.1
+
+# Health regen per tick when hunger > 50
+health-regen: 0.05
+
+# Hunger threshold to block XP gain
+hunger-xp-block: 10
+
+# Soul Pearl recipe (shapeless)
+# Materials: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html
+soul-pearl:
+  name: "&dSoul Pearl"
+  lore:
+    - "&7Right-click a mob to capture it."
+    - "&7Soul bound to you."
+  recipe:
+    - ENDER_PEARL
+    - DIAMOND
+    - GHAST_TEAR
+
+# Healing item
+heal-item: GOLDEN_APPLE
+
+# Preferred foods by mob type (optional, defaults to BREAD for passives, ROTTEN_FLESH for undead, BEEF for carnivores)
+preferred-foods:
+  ZOMBIE: ROTTEN_FLESH
+  SKELETON: BONE
+  CREEPER: GUNPOWDER
+  SPIDER: SPIDER_EYE
+  COW: WHEAT
+  SHEEP: WHEAT
+  PIG: CARROT
+  CHICKEN: WHEAT_SEEDS
+  WOLF: BEEF
+  CAT: COD
+  HORSE: GOLDEN_CARROT
+  WARDEN: ECHO_SHARD
+
+# XP gains
+xp:
+  combat-per-damage: 2
+  mining-per-block: 1
+  woodcutting-per-block: 1
+  hunting-per-kill: 10
+  endurance-per-damage-taken: 1
+  endurance-per-survive-combat: 5
+
+# Level curve: xp needed = base * (level ^ multiplier)
+level-curve:
+  base: 100
+  multiplier: 1.5
+
+messages:
+  prefix: "&6[SoulPetsPlugin] &r"
+  captured: "&aYou captured a %mob%!"
+  capture-failed-storage-full: "&cYou can't store more pets (max %max%)."
+  capture-failed-active-full: "&cYou already have %max% active pets."
+  pet-died: "&cYour pet %name% has died. All progress is lost."
+  pet-spawned: "&a%name% spawned!"
+  pet-despawned: "&7%name% returned to storage."
+  no-pets: "&7You don't have any pets."
+  pet-renamed: "&aRenamed to %name%."
+  pet-fed: "&a%name% enjoyed the meal."
+  pet-healed: "&a%name% has been healed."
+  hunger-warning: "&e%name% is hungry!"
+  combat-aggro: "&7%name% is attacking %target%!"
+
+
